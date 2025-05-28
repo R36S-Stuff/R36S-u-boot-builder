@@ -13,7 +13,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: ./build-uboot.sh
+        run: |
+          chmod a+x
+          ./build-uboot.sh
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.6.2
