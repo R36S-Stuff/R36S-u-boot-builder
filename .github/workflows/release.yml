@@ -17,13 +17,10 @@ jobs:
           chmod a+x ./build-uboot.sh
           ./build-uboot.sh
 
-      - name: Upload to release
-        uses: JasonEtco/upload-to-release@master
+      - name: Release
+        uses: softprops/action-gh-release@v2
         with:
-          args: |
+          files: |
             u-boot-r36s.bin
             u-boot-r36s.tar
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-          
+          draft: true
