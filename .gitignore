@@ -1,0 +1,6 @@
+*Zone.Identifier
+u-boot.config
+/src
+u-boot-r36s.bin
+u-boot-r36s.tar
+gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu.tar.xz
