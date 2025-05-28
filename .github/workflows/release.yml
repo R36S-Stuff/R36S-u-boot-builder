@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: build u-boot
+name: release u-boot
 on:
   workflow_dispatch:
 
