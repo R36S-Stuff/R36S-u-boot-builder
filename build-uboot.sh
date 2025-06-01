@@ -50,7 +50,7 @@ export PATH=/opt/toolchains/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bi
 
 #[[ ! -d src ]] && git clone https://github.com/ROCKNIX/hardkernel-uboot.git src
 #[[ ! -d src ]] && git clone https://github.com/christianhaitian/RG351MP-u-boot.git src
-[[ ! -d src ]] && git clone https://github.com/EatPrilosec/R36S-u-boot.git src
+[[ ! -d src ]] && git clone https://github.com/R36S-Stuff/R36S-u-boot.git src
 echo fixperms
 echo
 fixperms $1 $(id -u) $(id -g) src
