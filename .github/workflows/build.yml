@@ -14,6 +14,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          export UBootSrcRepo=$(echo $GITHUB_REPOSITORY | cut -d/ -f1)
           chmod a+x ./build-uboot.sh
           ./build-uboot.sh
 
