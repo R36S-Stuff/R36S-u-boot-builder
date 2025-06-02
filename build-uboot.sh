@@ -48,8 +48,9 @@ export ARCH=arm64
 export CROSS_COMPILE=aarch64-linux-gnu-
 export PATH=/opt/toolchains/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bin/:$PATH
 
-[[ -z "${UBootSrcRepo}" ]] && UBootSrcRepo=EatPrilosec || say UBootSrcRepo=${UBootSrcRepo}
-git clone https://github.com/${UBootSrcRepo}/RG351MP-u-boot.git src >/dev/null 2>&1
+[[ -z "${UBootSrcRepo}" ]] && UBootSrcRepo=EatPrilosec || echo >/dev/null 2>&1
+echo UBootSrcRepo=${UBootSrcRepo}
+git clone "https://github.com/${UBootSrcRepo}/R36S-u-boot.git" src >/dev/null 2>&1
 echo fixperms
 echo
 fixperms $1 $(id -u) $(id -g) src
