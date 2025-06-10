@@ -19,7 +19,8 @@ jobs:
           ./build-uboot.sh
 
       - name: Release
-        uses: softprops/action-gh-release@v2
+        #uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 #temporarily broken
         with:
           files: |
             u-boot-r36s.bin
