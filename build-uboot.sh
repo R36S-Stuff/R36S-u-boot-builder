@@ -55,7 +55,7 @@ if [[ -n "$ubootBranch" ]]
 then
     cd src
     echo branch=$ubootBranch
-    git switch $ubootBranch
+    git checkout -b $ubootBranch
     cd ..
 fi
 
