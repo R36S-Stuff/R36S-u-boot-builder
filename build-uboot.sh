@@ -56,6 +56,8 @@ then
     cd src
     echo branch=$ubootBranch
     git checkout -b $ubootBranch
+    cat cmd/hwrev.c
+    slerp 120
     cd ..
 fi
 
