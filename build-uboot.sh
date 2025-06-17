@@ -54,6 +54,7 @@ git clone "https://github.com/${UBootSrcRepo}/R36S-u-boot.git" src >/dev/null 2>
 if [[ -n "$ubootBranch" ]]
 then
     cd src
+    echo branch=$ubootBranch
     git switch $ubootBranch
     cd ..
 fi
