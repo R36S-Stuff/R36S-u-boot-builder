@@ -19,7 +19,7 @@ if [[ ! "$1" == "native" ]]
 then
     if [[ -z "$1" ]]
     then
-        docker run --rm -v "$(pwd)":"$(pwd)" ubuntu:18.04 "$(pwd)/$(basename "$0")" "$(pwd)" $USER $(id -u) $(id -g)
+        docker run --rm --env UBootSrcRepo --env ubootBranch -v "$(pwd)":"$(pwd)" ubuntu:18.04 "$(pwd)/$(basename "$0")" "$(pwd)" $USER $(id -u) $(id -g)
         exit 0
     else
         StartDir=$1
