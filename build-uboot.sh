@@ -51,6 +51,14 @@ export PATH=/opt/toolchains/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bi
 [[ -z "${UBootSrcRepo}" ]] && UBootSrcRepo=EatPrilosec || echo >/dev/null 2>&1
 echo UBootSrcRepo=${UBootSrcRepo}
 git clone "https://github.com/${UBootSrcRepo}/R36S-u-boot.git" src >/dev/null 2>&1
+if [[ -n "$ubootBranch" ]]
+then
+    cd src
+    git switch $ubootBranch
+    cd ..
+fi
+
+
 echo fixperms
 echo
 fixperms $1 $(id -u) $(id -g) src
