@@ -17,7 +17,7 @@ jobs:
           export UBootSrcRepo=$(echo $GITHUB_REPOSITORY | cut -d/ -f1)
           export ubootBranch=r36s-pancho
           chmod a+x ./build-uboot.sh
-          ./build-uboot.sh native
+          ./build-uboot.sh 
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.6.2
