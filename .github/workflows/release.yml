@@ -15,7 +15,6 @@ jobs:
       - name: Run a one-line script
         run: |
           export UBootSrcRepo=$(echo $GITHUB_REPOSITORY | cut -d/ -f1)
-          export ubootBranch=r36s-pancho
           chmod a+x ./build-uboot.sh
           ./build-uboot.sh
 
